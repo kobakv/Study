@@ -42,3 +42,13 @@ class Phone {
         self.pram = pram
     }
 }
+
+
+class laptop:Comp{
+    var battery:Int
+    //Наследование
+    init(cpu:Float,ram:Int,hdd:Int,battery:Int,vram:Int){
+        self.battery = battery
+        super.init(cpu: cpu, ram: ram, hdd: hdd, vram: vram)
+    }
+}
