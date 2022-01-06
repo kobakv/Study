@@ -11,6 +11,12 @@ class Comp {
     }
 }
 
+// Вивід в консоль
+let comp1 = Comp(cpu: 2.5, ram: 4, hdd: 180, vram: 1)
+let comp2 = Comp(cpu: 2.8, ram: 6, hdd: 240, vram: 4)
+let comp3 = Comp(cpu: 3, ram: 8, hdd: 360, vram: 8)
+print(comp3.cpu,comp3.ram,comp3.hdd,comp3.vram)
+
 
 class Car {
     var model: String
