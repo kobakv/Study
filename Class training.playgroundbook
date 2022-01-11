@@ -18,21 +18,27 @@ let comp3 = Comp(cpu: 3, ram: 8, hdd: 360, vram: 8)
 print(comp3.cpu,comp3.ram,comp3.hdd,comp3.vram)
 
 
-class Car {
+class Transport {
     var model: String
     var transmission: String
     var mp3: Bool
     var trim: Float
     var color: String
-    var trunk: Int
     
-    init(model:String,transmission:String,mp3:Bool,trim:Float,color:String,trunk:Int){
+    init(model:String,transmission:String,mp3:Bool,trim:Float,color:String){
         self.model = model
         self.transmission = transmission
         self.mp3 = mp3
         self.trim = trim
         self.color = color
+    }
+}
+
+class Car:Transport{
+    var trunk:String
+    init(model:String, transmission:String, mp3:Bool, trim:Float, color:String, trunk:String){
         self.trunk = trunk
+        super.init(model:model, transmission:transmission, mp3:mp3, trim:trim, color:color)
     }
 }
 
@@ -58,3 +64,9 @@ class laptop:Comp{
         super.init(cpu: cpu, ram: ram, hdd: hdd, vram: vram)
     }
 }
+
+let laptopApple = laptop(cpu: 4, ram: 8, hdd: 240, battery: 30, vram: 2)
+let laptopHp = laptop(cpu: 3, ram: 16, hdd: 1000, battery: 50, vram: 4)
+
+print(laptopApple.cpu)
+print(laptopHp.cpu)
